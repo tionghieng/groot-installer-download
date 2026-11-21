@@ -56,6 +56,16 @@ chmod +x ~/.groot-installer/install-groot
 ~/.groot-installer/install-groot
 ```
 
+Prefer double-clicking? Download `install-groot.desktop` into the
+same folder, then double-click it — a terminal opens and the
+installer runs. (On first use your file manager may ask you to trust
+it: right-click the file → Allow Launching, then double-click.)
+
+```sh
+curl -L -o ~/.groot-installer/install-groot.desktop https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot.desktop
+chmod +x ~/.groot-installer/install-groot.desktop
+```
+
 ```sh
 # arm64 (Raspberry Pi, ARM servers)
 mkdir -p ~/.groot-installer

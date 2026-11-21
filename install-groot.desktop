@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Groot
+Comment=Install Groot, the Telegram group assistant
+Exec=bash -c 'cd "$(dirname "%k")" && ./install-groot; echo; read -p "Press Enter to close"'
+Terminal=true
+Icon=utilities-terminal
+Categories=Utility;
