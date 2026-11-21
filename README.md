@@ -44,18 +44,24 @@ source; it ships as a private Docker image that the installer pulls.
 No login needed. Pick the build for your machine — most PCs and
 servers are amd64, Raspberry Pi and ARM servers are arm64.
 
+The installer downloads into `~/.groot-installer/` — the same folder
+where it later keeps its settings (`.env`, `docker-compose.yml`).
+Create the folder first, then download into it:
+
 ```sh
 # amd64 (most PCs / servers)
-curl -L -o install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-amd64
-chmod +x install-groot
-./install-groot
+mkdir -p ~/.groot-installer
+curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-amd64
+chmod +x ~/.groot-installer/install-groot
+~/.groot-installer/install-groot
 ```
 
 ```sh
 # arm64 (Raspberry Pi, ARM servers)
-curl -L -o install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-arm64
-chmod +x install-groot
-./install-groot
+mkdir -p ~/.groot-installer
+curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-arm64
+chmod +x ~/.groot-installer/install-groot
+~/.groot-installer/install-groot
 ```
 
 Verify the download with the checksums in `SHA256SUMS`:
