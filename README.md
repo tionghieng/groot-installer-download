@@ -136,6 +136,26 @@ your chats.
 
 ## Help
 
+Running the installer with no flags opens a menu:
+
+- **Fresh machine:** Install Groot, or Restore backup (if a backup exists)
+- **Set up:** Update Groot, Re-configure Groot, Create backup, Remove Groot
+
+- **Install Groot** — fresh install: the wizard checks your machine,
+  asks about the LLM, Telegram bot and optional extras, writes the
+  settings, and starts Groot.
+- **Restore backup** — fresh machine only: restores settings and
+  database from a backup, then starts Groot.
+- **Update Groot** — install level: a newer installer replaces itself,
+  then Groot restarts on the latest image.
+- **Re-configure Groot** — settings level: change the LLM, Telegram bot,
+  database, web search or calendar in `.env`.
+- **Create backup** — save settings, and optionally the database, into
+  `~/.groot-installer/backup/`.
+- **Remove Groot** — uninstall: a backup is kept, so you can restore it later.
+
+Or run it with a flag:
+
 ```sh
 ./install-groot --help       # show all options
 ./install-groot --dry-run    # walk through without writing anything
