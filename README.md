@@ -16,6 +16,9 @@ then Docker downloads the Groot image and starts Groot. In addition, you can dow
 **launcher** (`install-groot.desktop`) and double-click it: it opens a
 terminal and runs the installer for you.
 
+This repo holds only the built executables. The Groot bot ships as a
+Docker image that the installer pulls.
+
 ## What Groot does
 
 - **Chat** — ask questions, get answers from the LLM you chose
@@ -34,47 +37,42 @@ Private tools (changing the model, adding a database, viewing logs)
 stay only in your 1:1 chat with the bot. Only the admin can change
 settings.
 
-## The installer
-
-This repo holds only the built executables. The Groot bot ships as a
-Docker image that the installer pulls.
-
 ## Download
 
-Pick the build for your machine — most PCs and
-servers are amd64, Raspberry Pi and ARM servers are arm64.
+1. **Installer** — pick the build for your machine: most PCs and
+   servers are amd64, Raspberry Pi and ARM servers are arm64.
 
-The installer downloads into `~/.groot-installer/` — the same folder
-where it later keeps its settings (`.env`, `docker-compose.yml`).
-Create the folder first, then download into it:
+   The installer downloads into `~/.groot-installer/` — the same
+   folder where it later keeps its settings (`.env`,
+   `docker-compose.yml`). Create the folder first, then download
+   into it:
 
-```sh
-# amd64 (most PCs / servers)
-mkdir -p ~/.groot-installer
-curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-amd64
-chmod +x ~/.groot-installer/install-groot
-~/.groot-installer/install-groot
-```
+   ```sh
+   # amd64 (most PCs / servers)
+   mkdir -p ~/.groot-installer
+   curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-amd64
+   chmod +x ~/.groot-installer/install-groot
+   ~/.groot-installer/install-groot
+   ```
 
-```sh
-# arm64 (Raspberry Pi, ARM servers)
-mkdir -p ~/.groot-installer
-curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-arm64
-chmod +x ~/.groot-installer/install-groot
-~/.groot-installer/install-groot
-```
+   ```sh
+   # arm64 (Raspberry Pi, ARM servers)
+   mkdir -p ~/.groot-installer
+   curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-arm64
+   chmod +x ~/.groot-installer/install-groot
+   ~/.groot-installer/install-groot
+   ```
 
-### Double-click launcher
+2. **Launcher** — prefer double-clicking? Download
+   `install-groot.desktop` into the same folder, then double-click
+   it — a terminal opens and the installer runs. (On first use your
+   file manager may ask you to trust it: right-click the file →
+   Allow Launching, then double-click.)
 
-Prefer double-clicking? Download `install-groot.desktop` into the
-same folder, then double-click it — a terminal opens and the
-installer runs. (On first use your file manager may ask you to trust
-it: right-click the file → Allow Launching, then double-click.)
-
-```sh
-curl -L -o ~/.groot-installer/install-groot.desktop https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot.desktop
-chmod +x ~/.groot-installer/install-groot.desktop
-```
+   ```sh
+   curl -L -o ~/.groot-installer/install-groot.desktop https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot.desktop
+   chmod +x ~/.groot-installer/install-groot.desktop
+   ```
 
 Verify the download with the checksums in `SHA256SUMS`:
 
