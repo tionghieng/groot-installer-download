@@ -85,11 +85,16 @@ sha256sum install-groot
 Compare the hash it prints with the line for your build in
 `SHA256SUMS` — they must match.
 
-## Before you start
+## Prerequisite
+
+### System Requirement
 
 - A Linux machine (Ubuntu works) that stays on, with
   [Docker and Docker Compose](https://docs.docker.com/engine/install/)
   installed
+
+### Groot Requirement
+
 - A Telegram account — you will create a bot with
   [@BotFather](https://t.me/BotFather)
 - An LLM API key (e.g. DeepSeek, OpenAI) — or Ollama running locally
