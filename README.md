@@ -143,4 +143,4 @@ your chats.
 ./install-groot --uninstall  # remove Groot completely
 ```
 
-Logs: `cd ~/.groot-installer && docker compose logs -f agent`
+Logs: `cd ~/.groot-installer && docker compose logs -f groot`
