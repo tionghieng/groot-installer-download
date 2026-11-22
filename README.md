@@ -36,11 +36,6 @@ settings.
 
 ## The installer
 
-This repo holds the **Groot installer** — a small program that sets
-Groot up on a Linux machine. It is a terminal wizard: it asks a few
-questions, one at a time, in plain language, then writes the settings
-and starts Groot in Docker.
-
 This repo holds only the built executables. The Groot bot ships as a
 Docker image that the installer pulls.
 
