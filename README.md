@@ -12,9 +12,9 @@ You talk to it in Telegram: in a 1:1 chat with the bot, or by
 
 To run it, download the installer below and run it once — it asks a
 few questions (your LLM, your Telegram bot), writes the settings,
-and starts Groot in Docker. If you'd rather not use the terminal,
-download the launcher (`install-groot.desktop`) instead and
-double-click it: it opens a terminal and runs the installer for you.
+and starts Groot in Docker. In addition, you can download the
+launcher (`install-groot.desktop`) and double-click it: it opens a
+terminal and runs the installer for you.
 
 ## What Groot does
 
