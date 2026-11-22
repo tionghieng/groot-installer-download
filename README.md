@@ -109,23 +109,21 @@ Compare the hash it prints with the line for your build in
 - A Google service account, if you want Google Calendar in your
   groups — every chat already gets a built-in calendar
 
-## What the installer asks
+## Using Groot
 
-- **Step 0** — Checks your machine: Docker, Compose, Postgres, Ollama
-- **Step 1** — Which LLM Groot should use first (a working key is
-  required to continue), then pick a model from the list
-- **Step 2** — Your Telegram bot token from @BotFather, and your own
-  Telegram user ID (so only you can change settings)
-- **Step 3** — Database, optional — SQLite is the default, just a
-  file, no setup. Postgres or MySQL if you already run one.
-- **Step 4** — Writes a private `.env` and `docker-compose.yml` to
-  `~/.groot-installer/`, and logs in to the image registry
-  automatically
-- **Step 5** — Start Groot now? Say yes and it pulls the image and
-  starts the bot
+After the installer finishes, send `/start` to your bot in Telegram.
+If it replies, you are done.
 
-Then send `/start` to your bot in Telegram. If it replies, you are
-done. Add the bot to a group as admin, and @mention it to talk to it.
+Add the bot to a group as admin, then @mention it to talk to it.
+It only replies in groups when mentioned, so it never spams your
+chats.
+
+In your 1:1 chat with the bot you can change its settings — the
+model, web search, calendar, and more. Only you, the admin, can
+change settings.
+
+To update Groot, change its setup, back it up, or remove it, just
+run the installer again — it offers all of those on its menu.
 
 ## Help
 
