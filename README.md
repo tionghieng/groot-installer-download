@@ -99,6 +99,16 @@ Compare the hash it prints with the line for your build in
   [@BotFather](https://t.me/BotFather)
 - An LLM API key (e.g. DeepSeek, OpenAI) — or Ollama running locally
 
+### Nice to Have Requirement
+
+- A Postgres or MySQL database, if you want one instead of the
+  built-in SQLite (which needs no setup)
+- A web search provider — SearXNG, DuckDuckGo, Tavily, or Brave
+  (Tavily and Brave need an API key). Without one, Groot can't
+  search the web
+- A Google service account, if you want Google Calendar in your
+  groups — every chat already gets a built-in calendar
+
 ## What the installer asks
 
 - **Step 0** — Checks your machine: Docker, Compose, Postgres, Ollama
