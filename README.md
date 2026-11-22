@@ -56,6 +56,16 @@ chmod +x ~/.groot-installer/install-groot
 ~/.groot-installer/install-groot
 ```
 
+```sh
+# arm64 (Raspberry Pi, ARM servers)
+mkdir -p ~/.groot-installer
+curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-arm64
+chmod +x ~/.groot-installer/install-groot
+~/.groot-installer/install-groot
+```
+
+### Double-click launcher
+
 Prefer double-clicking? Download `install-groot.desktop` into the
 same folder, then double-click it — a terminal opens and the
 installer runs. (On first use your file manager may ask you to trust
@@ -66,19 +76,16 @@ curl -L -o ~/.groot-installer/install-groot.desktop https://raw.githubuserconten
 chmod +x ~/.groot-installer/install-groot.desktop
 ```
 
-```sh
-# arm64 (Raspberry Pi, ARM servers)
-mkdir -p ~/.groot-installer
-curl -L -o ~/.groot-installer/install-groot https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/install-groot-linux-arm64
-chmod +x ~/.groot-installer/install-groot
-~/.groot-installer/install-groot
-```
-
 Verify the download with the checksums in `SHA256SUMS`:
 
 ```sh
-sha256sum -c SHA256SUMS
+cd ~/.groot-installer
+curl -L -o SHA256SUMS https://raw.githubusercontent.com/tionghieng/groot-installer-download/main/SHA256SUMS
+sha256sum install-groot
 ```
+
+Compare the hash it prints with the line for your build in
+`SHA256SUMS` — they must match.
 
 ## Before you start
 
