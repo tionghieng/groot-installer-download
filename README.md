@@ -35,13 +35,12 @@ Groot up on a Linux machine. It is a terminal wizard: it asks a few
 questions, one at a time, in plain language, then writes the settings
 and starts Groot in Docker.
 
-The installer itself is **closed source** — this repo holds only the
-built executables, not the source code. The Groot bot is also closed
-source; it ships as a private Docker image that the installer pulls.
+This repo holds only the built executables. The Groot bot ships as a
+Docker image that the installer pulls.
 
 ## Download
 
-No login needed. Pick the build for your machine — most PCs and
+Pick the build for your machine — most PCs and
 servers are amd64, Raspberry Pi and ARM servers are arm64.
 
 The installer downloads into `~/.groot-installer/` — the same folder
@@ -124,8 +123,3 @@ done. Add the bot to a group as admin, and @mention it to talk to it.
 ```
 
 Logs: `cd ~/.groot-installer && docker compose logs -f agent`
-
-## Source
-
-The installer source code is **not** in this repo — this repo holds
-only the built executables. The source is private.
