@@ -109,21 +109,29 @@ Compare the hash it prints with the line for your build in
 - A Google service account, if you want Google Calendar in your
   groups — every chat already gets a built-in calendar
 
-## Using Groot
+## After installation
 
-After the installer finishes, send `/start` to your bot in Telegram.
-If it replies, you are done.
+A successful install leaves Groot running in Docker, ready in
+Telegram. Send `/start` to your bot — that establishes your 1:1
+chat (DM) with Groot, where you control it.
 
-Add the bot to a group as admin, then @mention it to talk to it.
-It only replies in groups when mentioned, so it never spams your
-chats.
+Configuration and settings live in different places:
 
-In your 1:1 chat with the bot you can change its settings — the
-model, web search, calendar, and more. Only you, the admin, can
-change settings.
+- **Configuration — in the installer.** What Groot connects to:
+  your LLM provider and API key, your Telegram bot token, the
+  database, web search, and Google Calendar. These are stored in
+  the `.env` file in `~/.groot-installer/`; Groot itself never
+  changes them. To change any of these — or to update, back up,
+  or remove Groot — run the installer again.
+- **Settings — in Telegram.** What you tune while using Groot: in
+  the DM, which of your configured LLMs and search providers to
+  use, each chat's calendar, and the admin tools; in each group,
+  how Groot behaves there — its style, topics, and when it joins
+  in. Settings save the moment you tap them and survive restarts.
 
-To update Groot, change its setup, back it up, or remove it, just
-run the installer again — it offers all of those on its menu.
+Add the bot to a group as admin to bring it in, then @mention it
+to talk to it. It only replies in groups when mentioned, so it
+never spams your chats.
 
 ## Help
 
