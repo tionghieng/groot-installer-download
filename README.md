@@ -129,9 +129,10 @@ Configuration and settings live in different places:
   how Groot behaves there — its style, topics, and when it joins
   in. Settings save the moment you tap them and survive restarts.
 
-Add the bot to a group as admin to bring it in, then @mention it
-to talk to it. It only replies in groups when mentioned, so it
-never spams your chats.
+Add the bot to a group as admin to bring it in — making it an
+admin needs the group owner's rights. Then @mention it to talk to
+it. It only replies in groups when mentioned, so it never spams
+your chats.
 
 ## Help
 
