@@ -10,10 +10,10 @@ You talk to it in Telegram: in a 1:1 chat with the bot, or by
 @mentioning it in a group. It only replies in groups when mentioned
 (or when you use `/ask`), so it never spams your chats.
 
-To run it, download the installer below and run it once — it asks a
+To run it, download the **installer** below and run it once — it asks a
 few questions (your LLM, your Telegram bot), writes the settings,
 then Docker downloads the Groot image and starts Groot. In addition, you can download the
-launcher (`install-groot.desktop`) and double-click it: it opens a
+**launcher** (`install-groot.desktop`) and double-click it: it opens a
 terminal and runs the installer for you.
 
 ## What Groot does
