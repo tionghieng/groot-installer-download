@@ -7,8 +7,7 @@ Google Gemini, DeepSeek, a local Ollama model, or any OpenAI-compatible
 custom model.
 
 You talk to it in Telegram: in a 1:1 chat with the bot, or by
-@mentioning it in a group. It only replies in groups when mentioned
-(or when you use `/ask`), so it never spams your chats.
+@mentioning it in a group. It only replies in groups when mentioned, so it never spams your chats.
 
 To run it, download the **installer** below and run it once — it asks a
 few questions (your LLM, your Telegram bot), writes the settings,
@@ -29,11 +28,9 @@ Docker image that the installer pulls.
 - **Work groups** — meeting notes and action items, task tracking,
   scheduling
 - **Memory** — per-group memory, so each group has its own context
-- **Calendar** — one shared calendar per group (Google Calendar, or
-  Outlook for work groups), with `/today`, `/week`, and reminders
-  before events
+- **Calendar** — one shared calendar per group (a built-in calendar, or Google Calendar), with reminders before events
 
-Private tools (changing the model, adding a database, viewing logs)
+Private tools (changing the model, viewing logs)
 stay only in your 1:1 chat with the bot. Only the admin can change
 settings.
 
@@ -101,7 +98,7 @@ Compare the hash it prints with the line for your build in
 
 ### Nice to Have Requirement
 
-- A Postgres or MySQL database, if you want one instead of the
+- A Postgres database, if you want one instead of the
   built-in SQLite (which needs no setup)
 - A web search provider — SearXNG, DuckDuckGo, Tavily, or Brave
   (Tavily and Brave need an API key). Without one, Groot can't
@@ -139,19 +136,19 @@ your chats.
 Running the installer with no flags opens a menu:
 
 - **Fresh machine:** Install Groot, or Restore backup (if a backup exists)
-- **Set up:** Update Groot, Re-configure Groot, Create backup, Remove Groot
+- **Set up:** Update Groot and Installer, Re-configure Groot, Create backup, Remove Groot
 
 - **Install Groot** — fresh install: the wizard checks your machine,
   asks about the LLM, Telegram bot and optional extras, writes the
   settings, and starts Groot.
 - **Restore backup** — fresh machine only: restores settings and
   database from a backup, then starts Groot.
-- **Update Groot** — install level: a newer installer replaces itself,
-  then Groot restarts on the latest image.
+- **Update Groot and Installer** — pick what to update: the Groot image
+  (pull the latest and restart it) or this installer (a newer one replaces itself).
 - **Re-configure Groot** — settings level: change the LLM, Telegram bot,
   database, web search or calendar in `.env`.
-- **Create backup** — save settings, and optionally the database, into
-  `~/.groot-installer/backup/`.
+- **Create backup** — Save Groot's settings (and optionally its
+  database) into `~/.groot-installer/backup/`.
 - **Remove Groot** — uninstall: a backup is kept, so you can restore it later.
 
 Or run it with a flag:
